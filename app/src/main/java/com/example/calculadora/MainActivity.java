@@ -43,6 +43,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        Multi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                multi();
+
+            }
+        });
         Salir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,6 +68,14 @@ public class MainActivity extends AppCompatActivity {
         res.setText(String.valueOf(r));
  }
 
+    private void multi(){
+        double  x,y;
+        double r;
+        x= Integer.parseInt(et1.getText().toString());
+        y= Integer.parseInt(et2.getText().toString());
+        r= x*y;
+        res.setText(String.valueOf(r));
+    }
     private void restar(){
         double  x,y;
         double r;
