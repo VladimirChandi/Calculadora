@@ -36,6 +36,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Resta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                restar();
+
+            }
+        });
         Salir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,6 +59,15 @@ public class MainActivity extends AppCompatActivity {
         r= x+y;
         res.setText(String.valueOf(r));
  }
+
+    private void restar(){
+        double  x,y;
+        double r;
+        x= Integer.parseInt(et1.getText().toString());
+        y= Integer.parseInt(et2.getText().toString());
+        r= x-y;
+        res.setText(String.valueOf(r));
+    }
   private void salir(){
    finish();
 
