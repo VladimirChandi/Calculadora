@@ -51,6 +51,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        Divi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                divi();
+
+            }
+        });
         Salir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,6 +90,15 @@ public class MainActivity extends AppCompatActivity {
         x= Integer.parseInt(et1.getText().toString());
         y= Integer.parseInt(et2.getText().toString());
         r= x-y;
+        res.setText(String.valueOf(r));
+    }
+
+    private void divi(){
+        double  x,y;
+        double r;
+        x= Integer.parseInt(et1.getText().toString());
+        y= Integer.parseInt(et2.getText().toString());
+        r= x/y;
         res.setText(String.valueOf(r));
     }
   private void salir(){
